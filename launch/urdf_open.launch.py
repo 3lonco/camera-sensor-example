@@ -34,7 +34,8 @@ def generate_launch_description():
         executable='rviz2',
         name='rviz2',
         output='screen',
-        parameters=[{'use_sim_time': use_sim_time}]
+        parameters=[{'use_sim_time': use_sim_time}],
+        arguments=["-d", rviz_config_file]
     )
 
     # URDFロードノードの起動
@@ -45,6 +46,11 @@ def generate_launch_description():
         output='screen',
         parameters=[{'use_sim_time': use_sim_time}],
         arguments=[urdf_file]
+    )
+    joint_state_pub_gui_node = Node(
+        package="joint_state_publisher_gui",
+        executable="joint_state_publisher_gui",
+        output="screen",
     )
 
     # launchファイルの構成
@@ -59,6 +65,7 @@ def generate_launch_description():
     # ノードの起動
     ld.add_action(rviz_node)
     ld.add_action(robot_state_publisher_node)
+    ld.add_action(joint_state_pub_gui_node)
 
     return ld
 def main(argv=None):

@@ -1,2 +1,32 @@
-global_options:
-  fixed_frame: base_link
+Panels:
++ Class: rviz_common/Displays
+- Class: rviz/Displays
+
+ Visualization Manager:
++ Class: rviz_default_plugins/Grid
+- Class rviz/Grid
+
+-  - Class: rviz_common/Time
+-    Experimental: false
+-    Name: Time
+-    SyncMode: 0
+-    SyncSource: ""
+-Preferences:
+-  PromptSaveOnExit: true
+-Toolbars:
+-  toolButtonStyle: 2
+
+Window Geometry:
+-  Time:
+-    collapsed: false
+
+RobotDescriptionトピックの設定
++      Collision Enabled: false
++      Description File: ""
++      Description Source: Topic
++      Description Topic:
++        Depth: 5
++        Durability Policy: Volatile
++        History Policy: Keep Last
++        Reliability Policy: Reliable
++        Value: /robot_description
