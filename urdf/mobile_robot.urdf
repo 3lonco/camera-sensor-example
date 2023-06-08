@@ -1,31 +1,23 @@
 <?xml version="1.0"?>
 <robot name="mobilerobot">
-    <material name="black">
-        <color rgba="0.2 0.2 0.2 1" />
-    </material>
-    <material name="grey">
-        <color rgba="0.75 0.75 0.75 1" />
-    </material>
     <link name="base_link">
         <visual>
             <geometry>
                 <box size="0.13 0.1 0.052" />
             </geometry>
-            <material name="grey" />
+
         </visual>
         <visual name="regulators">
             <geometry>
                 <box size="0.005 0.065 0.02" />
             </geometry>
             <origin xyz="0.04 0 0.036" rpy="0 0 0" />
-            <material name="black" />
         </visual>
         <visual name="connector">
             <geometry>
                 <box size="0.075 0.016 0.026" />
             </geometry>
             <origin xyz="0 -0.027 0.039" rpy="0 0 0" />
-            <material name="black" />
         </visual>
         <collision>
             <geometry>
@@ -41,7 +33,6 @@
                 <box size="0.02 0.02 0.04" />
             </geometry>
             <origin xyz="-0.01 0 0" rpy="0 0 0" />
-            <material name="grey" />
         </visual>
         <collision>
             <geometry>
@@ -63,7 +54,6 @@
             <geometry>
                 <cylinder length="0.005" radius="0.02" />
             </geometry>
-            <material name="black" />
         </visual>
         <collision>
             <geometry>
@@ -84,7 +74,6 @@
             <geometry>
                 <cylinder length="0.008" radius="0.024" />
             </geometry>
-            <material name="black" />
         </visual>
         <collision>
             <geometry>
@@ -105,7 +94,6 @@
             <geometry>
                 <cylinder length="0.008" radius="0.024" />
             </geometry>
-            <material name="black" />
         </visual>
         <collision>
             <geometry>
