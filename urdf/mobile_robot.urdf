@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot name="mobilerobot">
+    <!--ここから追加 -->
+    <material name="black">
+        <color rgba="0.2 0.2 0.2 1" />
+    </material>
+    <material name="grey">
+        <color rgba="0.75 0.75 0.75 1" />
+    </material>
+    <!-- ここから追加 -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="0.13 0.1 0.052" />
+            </geometry>
+        </visual>
+    </link>
+    <!--ここまで追加-->
+    <visual name="regulators">
+        <geometry>
+            <box size="0.005 0.065 0.02" />
+        </geometry>
+        <origin xyz="0.04 0 0.036" rpy="0 0 0" />
+    </visual>
+    <visual name="connector">
+        <geometry>
+            <box size="0.075 0.016 0.026" />
+        </geometry>
+        <origin xyz="0 -0.027 0.039" rpy="0 0 0" />
+    </visual>
+    <!--ここから追加 -->
+    <collision>
+        <geometry>
+            <box size="0.13 0.1 0.078" />
+        </geometry>
+        <origin xyz="0 0 0.013" rpy="0 0 0" />
+    </collision>
+    <!--ここまで追加 -->
+</robot>
